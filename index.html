@@ -563,9 +563,9 @@
 
       function setDefaultDates() {
         const today = new Date();
-        const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
+        const startDate = new Date(2024, 0, 1); 
 
-        document.getElementById("startDate").value = formatDate(firstDayOfYear);
+        document.getElementById("startDate").value = formatDate(startDate);
         document.getElementById("endDate").value = formatDate(today);
       }
 
