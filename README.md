@@ -30,7 +30,7 @@ A comprehensive REST API for managing inventory, products, transactions, and gen
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/Aryaaazrr/inventory_app.git
-cd inventory-app
+cd inventory_app
 ```
 
 ### 2. Install Dependencies
