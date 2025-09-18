@@ -64,7 +64,7 @@ this.inventoryManager = new InventoryManager({
   host: 'localhost',
   user: 'root',           // Your MySQL username
   password: 'password',   // Your MySQL password
-  database: 'test_inventory'
+  database: 'db_inventory'
 });
 ```
 

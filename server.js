@@ -9,7 +9,7 @@ class APIServer {
       host: "localhost",
       user: "root",
       password: "password",
-      database: "test_inventory",
+      database: "db_inventory",
     });
 
     this.server = http.createServer(this.handleRequest.bind(this));
