@@ -29,8 +29,8 @@ A comprehensive REST API for managing inventory, products, transactions, and gen
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd inventory-management-api
+git clone https://github.com/Aryaaazrr/inventory_app.git
+cd inventory-app
 ```
 
 ### 2. Install Dependencies
@@ -250,41 +250,6 @@ curl "http://localhost:3000/reports/low-stock?threshold=10"
 }
 ```
 
-## Database Schema
-
-### Products Table
-- `id`: Auto-increment primary key
-- `product_id`: Unique product identifier
-- `name`: Product name
-- `price`: Product price (decimal)
-- `stock`: Available quantity
-- `category`: Product category
-- `supplier_id`: Reference to supplier
-
-### Transactions Table
-- `id`: Auto-increment primary key
-- `transaction_id`: Unique transaction identifier
-- `product_id`: Reference to product
-- `customer_id`: Reference to customer
-- `quantity`: Transaction quantity
-- `type`: Transaction type (sale, purchase, restock, return)
-- `unit_price`: Price per unit
-- `total_amount`: Total transaction amount
-
-### Customers Table
-- `id`: Auto-increment primary key
-- `customer_id`: Unique customer identifier
-- `name`: Customer name
-- `email`: Customer email
-- `customer_type`: Customer type (regular, premium, wholesale)
-
-### Suppliers Table
-- `id`: Auto-increment primary key
-- `supplier_id`: Unique supplier identifier
-- `name`: Supplier name
-- `contact_person`: Contact person name
-- `email`: Supplier email
-
 ## Event System
 
 The system uses Node.js EventEmitters for real-time notifications:
@@ -394,14 +359,6 @@ DEBUG=inventory:* npm start
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-MIT License - see LICENSE file for details
-
-## Support
-
-For support and questions, please create an issue in the repository or contact the development team.
-
 ---
 
 **System Requirements Met:**
@@ -415,3 +372,12 @@ For support and questions, please create an issue in the repository or contact t
 - ✅ Comprehensive Logging
 - ✅ Transaction Management
 - ✅ Inventory Reports
+
+## 📄 Lisensi
+
+Proyek ini bersifat **open-source**.
+Silakan digunakan, dimodifikasi, dan dikembangkan sesuai kebutuhan.
+
+---
+
+✦ Dibuat dengan 💻 dan ☕ oleh [Aryaaazrr](https://github.com/Aryaaazrr)
