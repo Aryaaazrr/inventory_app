@@ -14,7 +14,6 @@
 
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         min-height: 100vh;
         color: #333;
       }
@@ -38,7 +37,7 @@
       .header h1 {
         font-size: 2.5rem;
         font-weight: 700;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #667eea, #349ebb);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 10px;
@@ -110,7 +109,7 @@
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #667eea, #349ebb);
         color: white;
         box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
       }
@@ -157,7 +156,7 @@
         left: 0;
         right: 0;
         height: 4px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #667eea, #349ebb);
       }
 
       .card:hover {
@@ -178,7 +177,7 @@
       .card-icon {
         width: 24px;
         height: 24px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #667eea, #349ebb);
         border-radius: 6px;
         display: flex;
         align-items: center;
@@ -220,7 +219,7 @@
         left: 0;
         right: 0;
         height: 3px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #667eea, #349ebb);
       }
 
       .stat-card:hover {
@@ -231,7 +230,7 @@
       .stat-value {
         font-size: 2.2rem;
         font-weight: 800;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #667eea, #349ebb);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 8px;
@@ -434,7 +433,7 @@
     <div class="dashboard-container">
       <!-- Header -->
       <div class="header">
-        <h1>📊 Dashboard Inventory Management</h1>
+        <h1>Dashboard Inventory Management</h1>
         <p>Sistem Manajemen Inventori Real-time dengan Analytics Lengkap</p>
       </div>
 
@@ -470,16 +469,16 @@
             <button class="btn btn-secondary" onclick="resetFilters()">Reset</button>
           </div>
         </div>
-        <div class="date-range-info" id="dateRangeInfo">📅 Menampilkan data untuk semua periode</div>
+        <div class="date-range-info" id="dateRangeInfo">Menampilkan data untuk semua periode</div>
       </div>
 
       <!-- Quick Actions -->
       <div class="quick-actions">
-        <h3>🚀 Aksi Cepat</h3>
+        <h3>Quick Action</h3>
         <div class="action-buttons">
-          <button class="btn btn-primary" onclick="refreshData()">🔄 Refresh Data</button>
-          <button class="btn btn-secondary" onclick="exportReport()">📥 Export Laporan</button>
-          <button class="btn btn-secondary" onclick="showLowStock()">⚠️ Stok Rendah</button>
+          <button class="btn btn-primary" onclick="refreshData()">Refresh Data</button>
+          <button class="btn btn-secondary" onclick="exportReport()">Export Laporan</button>
+          <button class="btn btn-secondary" onclick="showLowStock()">Stok Rendah</button>
         </div>
       </div>
 
@@ -507,10 +506,7 @@
       <div class="dashboard-grid">
         <!-- Sales per Month Chart -->
         <div class="card">
-          <div class="card-title">
-            <div class="card-icon">📈</div>
-            Penjualan per Bulan
-          </div>
+          <div class="card-title">Penjualan per Bulan</div>
           <div class="chart-container">
             <canvas id="salesByMonthChart"></canvas>
           </div>
@@ -518,10 +514,7 @@
 
         <!-- Sales per Category Chart -->
         <div class="card">
-          <div class="card-title">
-            <div class="card-icon">🏷️</div>
-            Penjualan per Kategori
-          </div>
+          <div class="card-title">Penjualan per Kategori</div>
           <div class="chart-container">
             <canvas id="salesByCategoryChart"></canvas>
           </div>
@@ -530,10 +523,7 @@
 
       <!-- Top 10 Products Table -->
       <div class="products-table">
-        <div class="card-title">
-          <div class="card-icon">🏆</div>
-          10 Produk Terlaris Berdasarkan Nilai Penjualan
-        </div>
+        <div class="card-title">10 Produk Terlaris Berdasarkan Nilai Penjualan</div>
         <div id="topProductsContent">
           <div class="loading">Memuat data produk terlaris...</div>
         </div>
@@ -563,7 +553,7 @@
 
       function setDefaultDates() {
         const today = new Date();
-        const startDate = new Date(2024, 0, 1); 
+        const startDate = new Date(2024, 0, 1);
 
         document.getElementById("startDate").value = formatDate(startDate);
         document.getElementById("endDate").value = formatDate(today);
@@ -781,15 +771,7 @@
           },
         });
       }
-
-      //   function updateSalesStats(rawData) {
-      //     const totalSales = rawData.reduce((sum, item) => sum + parseFloat(item.total_sales || 0), 0);
-      //     const totalTransactions = rawData.length;
-
-      //     document.getElementById("totalSales").textContent = formatCurrency(totalSales);
-      //     document.getElementById("totalTransactions").textContent = formatNumber(totalTransactions);
-      //   }
-
+      
       function updateChart(canvasId, config) {
         const ctx = document.getElementById(canvasId).getContext("2d");
 
